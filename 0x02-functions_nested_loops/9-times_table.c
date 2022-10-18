@@ -18,7 +18,7 @@ void times_table(void)
 			{
 				if (y != 0)
 					_putchar(' ');
-				_putchar(n + '0');
+				_putchar(z + '0');
 
 				if (y == 9)
 					continue;
