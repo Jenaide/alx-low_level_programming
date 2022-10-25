@@ -20,7 +20,7 @@ int main(void)
 	{
 		password[x] = rand() % 78;
 		sum += (password[x] + '0');
-		putchar(pass[x] + '0');
+		putchar(password[x] + '0');
 		if ((2772 - sum) - '0' < 78)
 		{
 			y = 2772 - sum - '0';
@@ -30,5 +30,5 @@ int main(void)
 		}
 	}
 
-	return (0)
+	return (0);
 }
