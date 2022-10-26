@@ -22,7 +22,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest++;
 
 	if (n > slen)
-		n + slen;
+		n = slen;
 
 	src = start;
 
