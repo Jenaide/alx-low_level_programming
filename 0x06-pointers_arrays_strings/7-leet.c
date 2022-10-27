@@ -7,18 +7,19 @@
  */
 char *leet(char *x)
 {
-	int i = 0, j;
-	char dub[6] = {'5', '8', '3', '3', '4', 0};
-	char str[6] = {'C', 'c', 'a', 'A', 'f', 'F'};
+	int i, j;
+	char str1[] = "aAgGjJhHiIoO";
+	char str2[] = "8833661122";
 
-	while (s[i])
+	for (i = 0; x[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
-			if (x[i] == str[j]
-				x[i] = dun[j];
-
-		i++;
+		{
+			if (x[i] == str1[j])
+			{
+				x[i] = str2[j];
+			}
+		}
 	}
-
 	return (x);
 }
