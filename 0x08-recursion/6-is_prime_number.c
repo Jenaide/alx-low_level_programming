@@ -25,7 +25,7 @@ int is_prime_number(int n)
  * @b: results of division
  * Return: 1 if num is dividable or 0 otherwise
  */
-int div(int a, int b)
+int is_div(int a, int b)
 {
 	if (a % b == 0)
 		return (0);
