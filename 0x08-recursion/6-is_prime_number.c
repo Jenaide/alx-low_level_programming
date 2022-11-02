@@ -1,5 +1,5 @@
 #include "main.h"
-int is_div(int a, int b)
+int is_div(int a, int b);
 
 /**
  * is_prime_number - function that returns 1 if the input is prime
