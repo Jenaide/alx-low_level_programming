@@ -1,0 +1,1 @@
+assignment static_libraries
