@@ -38,21 +38,21 @@ char *str_concat(char *s1, char *s2)
 
 	size = (_strlen(s1) + _strlen(s2) + 1);
 
-	ds = (char *) malloc(size * sizeof(char));
+	des = (char *) malloc(size * sizeof(char));
 
-	if (ds == 0)
+	if (des == 0)
 	{
 		return (NULL);
 	}
 
 	for (x = 0; *(s1 + x) != '\0'; x++;
-		*(ds + x) = *(s1 + x);
+		*(des + x) = *(s1 + x);
 
 	for (y = 0; *(s2 + y) != '\0'; y++)
 	{
-		*(ds + x) = *(s2 + y);
+		*(des + x) = *(s2 + y);
 		x++;
 	}
 
-	return (ds);
+	return (des);
 }
