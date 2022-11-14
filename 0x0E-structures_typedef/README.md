@@ -1,0 +1,1 @@
+assignment for structures_typedef
