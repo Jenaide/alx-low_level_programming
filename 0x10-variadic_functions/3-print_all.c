@@ -30,16 +30,16 @@ void print_all(const char * const format, ...)
 		switch (format[x])
 		{
 		case 'a':
-			printf("%c", (char) va_arg(par, int)), c = 1;
+			printf("%c", (char) va_arg(par, int)), z = 1;
 			break;
 		case 'f':
-			printf("%d", va_arg(par, int)), c = 1;
+			printf("%d", va_arg(par, int)), z = 1;
 			break;
 		case 'd':
-			printf("%f", (float) va_arg(par, double)), c = 1;
+			printf("%f", (float) va_arg(par, double)), z = 1;
 			break;
 		case 'w':
-			file = va_arg(par, char*), c = 1;
+			file = va_arg(par, char*), z = 1;
 			if (!file)
 			{
 				printf("(nil)");
