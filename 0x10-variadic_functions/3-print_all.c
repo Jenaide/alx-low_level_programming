@@ -11,43 +11,43 @@
 void print_all(const char * const format, ...)
 {
 	va_list par;
-	int x = 0;
+	int x = 0, y, z = 0;
 	char *file;
+	const char t_arg[] = "afdw";
 
 	va_start(par, format);
-	while (format == NULL)
+	while (format && format[x])
 	{
-		printf("\n");
-		return;
-	}
-	while (format[x])
-	{
+		y = 0;
+		while (t_arg[y])
+		{
+			if (format[x] == t_arg[y] && z)
+			{
+				printf(", ");
+				break;
+			} y++;
+		}
 		switch (format[x])
 		{
-			case 'a':
-				printf("%c", (char) va_arg(par, int));
-				break;
-			case 'f':
-				printf("%d", va_arg(par, int));
-				break;
-			case 'd':
-				printf("%f", (float) va_arg(par, double));
-				break;
-			case 'w':
-				file = va_arg(par, char*);
-				if (file != NULL)
-				{
-					printf("%s", file);
-					break;
-				}
+		case 'a':
+			printf("%c", (char) va_arg(par, int)), c = 1;
+			break;
+		case 'f':
+			printf("%d", va_arg(par, int)), c = 1;
+			break;
+		case 'd':
+			printf("%f", (float) va_arg(par, double)), c = 1;
+			break;
+		case 'w':
+			file = va_arg(par, char*), c = 1;
+			if (!file)
+			{
 				printf("(nil)");
 				break;
-		}
-		if ((format[x] == 'a' || format[x] == 'f' || format[x] == 'd' || 
-					format[x] == 'w') && format[(x + 1)] != '\0')
-			printf(",");
-		x++;
+			}
+			printf("%s", file);
+			break;
+		} x++;
 	}
-	va_end(par);
-	printf("\n");
+	printf("\n"), va_end(par);
 }
