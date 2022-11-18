@@ -43,7 +43,8 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 				break;
 		}
-		if ((format[x] == 'a' || format[x] == 'f' || format[x] == 'd' || format[x] == 'w') && format[(x + 1)] != '\0')
+		if ((format[x] == 'a' || format[x] == 'f' || format[x] == 'd' || 
+					format[x] == 'w') && format[(x + 1)] != '\0')
 			printf(",");
 		x++;
 	}
