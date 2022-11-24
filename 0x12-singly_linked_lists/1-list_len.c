@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * list_len - function that gets the number of nodes 
+ * list_len - function that gets the number of nodes
  * @h: head of linklist
  * Return: number of nodes
  */
