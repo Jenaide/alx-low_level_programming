@@ -7,7 +7,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int min = 0, max = 33879;
+	unsigned int min = 0, max = 32768;
 
 	if (n == 0)
 	{
