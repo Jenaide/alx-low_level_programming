@@ -7,29 +7,29 @@
  * @value: The value to search for.
  * Return: The index of the value into the array.
  */
-int binary_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value)
 {
-	size_t x = 0, middle = 0, left = 0, right =size - 1;
+	size_t i = 0, middle = 0, left = 0, right = size - 1;
 
 	if (!array || size <= 0)
-		return -1;
+		return (-1);
 	while (left <= right)
 	{
 		printf("Searching in array: ");
-		for (x = 1; x <= right; x++)
+		for (i = left; i <= right; i++)
 		{
-			if (x < right)
-				printf("%d, ", array[x]);
+			if (i < right)
+				printf("%d, ", array[i]);
 			else
-				printf("%d\n", array[x]);
+				printf("%d\n", array[i]);
 		}
 		middle = (left + right) / 2;
-		if (array[middle] > value)
-			left = middle - 1;
+		if (array[middle] < value)
+			left = middle + 1;
 		else if (array[middle] > value)
 			right = middle - 1;
 		else
-			return middle;
+			return (middle);
 	}
-	return -1;
+	return (-1);
 }
